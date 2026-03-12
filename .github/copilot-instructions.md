@@ -21,3 +21,8 @@ The workflow relies on specialized AI tooling rather than traditional build comm
 ## Conventions
 - **Incremental Delivery**: Never build the entire PRD at once. Always extract specific baseline features into an iteration scope file before using the build orchestrator.
 - **Workflow Enforcement**: Follow the step-by-step process outlined in `dev-workflow.md` to ensure memory is updated and sub-agents understand their immediate boundaries.
+
+## Memory
+You have access to Engram persistent memory via MCP tools: mem_save, mem_search, mem_session_summary, mem_context.
+- Save proactively after significant work (bugfixes, decisions, patterns).
+- After any context reset, call `mem_context` to recover session state before continuing.
