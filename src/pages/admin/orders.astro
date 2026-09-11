@@ -1,0 +1,20 @@
+---
+import AdminLayout from "@/layouts/AdminLayout.astro";
+import { InviteClientForm } from "@/components/admin/InviteClientForm";
+---
+
+<AdminLayout pageTitle="Orders | Micro CRM">
+  <section class="grid gap-4">
+    <div class="card border border-base-300 bg-base-100 shadow-sm">
+      <div class="card-body">
+        <h1 class="card-title">Orders Workspace</h1>
+        <p class="text-base-content/80">
+          Hierarchical order and sub-order table will be added in later phases. This page now hosts the
+          admin invitation flow.
+        </p>
+      </div>
+    </div>
+
+    <InviteClientForm client:load />
+  </section>
+</AdminLayout>

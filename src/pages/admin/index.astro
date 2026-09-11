@@ -1,0 +1,28 @@
+---
+import AdminLayout from "@/layouts/AdminLayout.astro";
+---
+
+<AdminLayout pageTitle="Admin | Micro CRM">
+  <section class="grid gap-4 md:grid-cols-3">
+    <a class="card border border-base-300 bg-base-100 shadow-sm" href="/admin/providers">
+      <div class="card-body">
+        <h2 class="card-title">Providers</h2>
+        <p>Manage supplier records and contacts.</p>
+      </div>
+    </a>
+
+    <a class="card border border-base-300 bg-base-100 shadow-sm" href="/admin/clients">
+      <div class="card-body">
+        <h2 class="card-title">Clients</h2>
+        <p>Review client directory and future order history views.</p>
+      </div>
+    </a>
+
+    <a class="card border border-base-300 bg-base-100 shadow-sm" href="/admin/orders">
+      <div class="card-body">
+        <h2 class="card-title">Orders</h2>
+        <p>Use the orders workspace and invite flow foundation.</p>
+      </div>
+    </a>
+  </section>
+</AdminLayout>

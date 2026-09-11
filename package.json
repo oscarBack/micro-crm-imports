@@ -1,0 +1,47 @@
+{
+  "name": "micro-crm-imports",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.13.1",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "typecheck": "astro check",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:local": "pnpm exec wrangler d1 migrations apply micro_crm_imports --local",
+    "db:migrate:remote": "pnpm exec wrangler d1 migrations apply micro_crm_imports --remote",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:setup:local": "pnpm db:migrate:local && pnpm db:seed"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.2.5",
+    "@astrojs/react": "^6.0.4",
+    "@clerk/astro": "^4.0.19",
+    "astro": "^7.2.7",
+    "drizzle-orm": "^0.45.2",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@faker-js/faker": "^10.6.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.3.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "daisyui": "^5.7.22",
+    "dotenv": "^17.4.2",
+    "drizzle-kit": "^0.31.10",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.12",
+    "typescript": "^5.9.2",
+    "wrangler": "^4.126.0"
+  }
+}

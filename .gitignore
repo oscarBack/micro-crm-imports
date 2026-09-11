@@ -2,3 +2,13 @@
 
 # local AI tooling
 .agents/
+
+# runtime artifacts
+node_modules/
+.astro/
+dist/
+.wrangler/
+
+# local secrets
+.dev.vars
+.env

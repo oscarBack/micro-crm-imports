@@ -1,0 +1,35 @@
+---
+import "@/styles/global.css";
+
+interface Props {
+  pageTitle?: string;
+}
+
+const { pageTitle = "Micro CRM Admin" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="bg-base-200 text-base-content">
+    <div class="min-h-screen">
+      <header class="navbar border-b border-base-300 bg-base-100 px-4 shadow-sm">
+        <div class="flex-1">
+          <a class="text-lg font-semibold" href="/admin">Micro CRM Admin</a>
+        </div>
+        <nav class="flex gap-2">
+          <a class="btn btn-ghost btn-sm" href="/admin/providers">Providers</a>
+          <a class="btn btn-ghost btn-sm" href="/admin/clients">Clients</a>
+          <a class="btn btn-ghost btn-sm" href="/admin/orders">Orders</a>
+        </nav>
+      </header>
+      <main class="mx-auto w-full max-w-6xl p-4 md:p-6">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

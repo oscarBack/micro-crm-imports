@@ -1,0 +1,18 @@
+---
+import "@/styles/global.css";
+import { SignIn } from "@clerk/astro/components";
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Sign in | Micro CRM</title>
+  </head>
+  <body class="bg-base-200 text-base-content">
+    <main class="mx-auto flex min-h-screen max-w-3xl items-center justify-center p-6">
+      <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" />
+    </main>
+  </body>
+</html>

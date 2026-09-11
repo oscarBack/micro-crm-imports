@@ -1,0 +1,17 @@
+name = "micro-crm-imports"
+main = "@astrojs/cloudflare/entrypoints/server"
+compatibility_date = "2026-08-26"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+
+[assets]
+binding = "ASSETS"
+directory = "./dist"
+
+[observability]
+enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "micro_crm_imports"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "drizzle/migrations"
